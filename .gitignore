@@ -1,0 +1,26 @@
+# Node.js 
+node_modules/ 
+
+# Logs 
+logs 
+*.log 
+npm-debug.log* 
+
+# Diretórios de dependência 
+pids 
+logs 
+*.pid 
+*.seed 
+*.pid.lock 
+
+# Diretório de cache npm opcional 
+.npm 
+
+# Cache eslint opcional 
+.eslintcache 
+
+# Histórico REPL opcional 
+.node_repl_history 
+
+# Variáveis ​​de ambiente 
+.env*
