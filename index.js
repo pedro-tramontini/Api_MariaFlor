@@ -16,18 +16,17 @@ app.get("/", (req, res) => {
     })
 })
 
-app.get("/cidades", async (req, res) => {
-    const clientes = await db.selectCidade();
-    res.json(clientes);
-})
+// ROTAS DO CRUD DE CLIENTE
 
-app.post("/cadastrar-pessoa", async (req, res) => {
-    await db.inserirPessoa(req.body);
+app.post("/cadastrar-cliente", async (req, res) => {
+    const { pessoa, cliente, telefone, cidade, endereco } = req.body;
+
+    await db.inserirCliente(pessoa, cliente, telefone, cidade, endereco);
     res.sendStatus(201)
 })
 
-app.get("/listar-pessoa", async (req, res) => {
-    const pessoa = await db.selectPessoa();
+app.get("/listar-cliente", async (req, res) => {
+    const pessoa = await db.selecionarCliente();
     res.json(pessoa);
 })
 
